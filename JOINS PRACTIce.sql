@@ -74,3 +74,16 @@ left join department d on e.dep_id = d.dep_id
 left join manager m on e.manager_id = m.manager_id
 left join projects p on p.team_member_id = e.emp_id
 
+#----checking all  employee names together with all of their department_names --------------#
+
+select * from Employees
+select * from department
+select e.emp_name, d.dep_name from Employees e 
+full join department d on e.dep_id = d.dep_id
+
+#-----returning all employee names with their corresponding department names----------#
+
+select e.emp_name, d.dep_name from Employees e 
+cross join department d;
+
+
